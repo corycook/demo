@@ -1,6 +1,3 @@
 import {SessionInput} from './session_input.js';
-
-window.addEventListener('DOMContentLoaded', () => {
-  customElements.define(
-      SessionInput.elementName, SessionInput, SessionInput.config);
-});
+import {GoogleMap} from './google_map/google_map.js';
+import {GoogleMapMarker} from './google_map/google_map_marker.js'
