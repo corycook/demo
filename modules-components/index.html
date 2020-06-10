@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <title>Modules & Components</title>
-<script src="./index.js" type="module"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfsfuw46E9s1CdTt_DA8pQ_VMZOmVX90" 
+    async defer></script>
+<script src="./index.js" type="module" async defer></script>
 
 <h1>Modules & Components</h1>
 
@@ -14,7 +16,16 @@
 
 <p>Components allow you to define specific behaviors for HTML elements.
 
-<p>Here is an input that retains its value in sessionStorage, allowing it to 
-    have the same value between pages.
+<p>Here is an input that retains its value in sessionStorage, allowing it to
+  have the same value between pages.
   <input is="session-input" type="text" name="name" placeholder="First name">
   <a href="./index.html">Refresh</a>
+
+<h3>Complex Example</h3>
+
+<google-map lat="37.4220" lng="-122.084" zoom="12">
+  <google-map-marker title="Googleplex" lat="37.4220" lng="-122.084">
+    <h2>Googleplex</h2>
+    The headquarters of Google. Home to many vacant cafes and micro-kitchens.
+  </google-map-marker>
+</google-map>

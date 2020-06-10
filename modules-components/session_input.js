@@ -6,9 +6,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements
  */
 export class SessionInput extends HTMLInputElement {
-  static elementName = 'session-input';  // custom element names require a '-'
-  static config = {extends: 'input'};
-
   /** The unique session key for this input. */
   get sessionKey() {
     return `session-input-${location.pathname}-${this.name}`;
@@ -30,3 +27,5 @@ export class SessionInput extends HTMLInputElement {
     sessionStorage.setItem(this.sessionKey, this.value);
   };
 }
+
+customElements.define('session-input', SessionInput, {extends: 'input'});
